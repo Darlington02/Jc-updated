@@ -34,6 +34,9 @@ nav ul li{
     display: inline-block;
     padding: 10px 25px;
 }
+.fa-solid  {
+    display: none !important;
+}
 nav ul li a{
     color: white;
     text-decoration: none;
@@ -310,21 +313,96 @@ footer p:nth-child(2){
 }  
 @media screen and (max-width:430px){
     .hero{
-        width: 1057px;
+        width: 100%;
+        height: 80vh;
     }
-    .about{
-        width: 1057px;
+    nav{
+        padding-top: 10px;
+    }
+    nav ul li{
+        display: none;
+        padding: 10px 25px;
+    }
+    .logo{
+        font-size: 15px;
+        letter-spacing: none;
+    }
+    .btn{
+        padding: 5px 15px;
+    }
+    .fa-solid  {
+        color: white;
+        font-size: 30px;
+    }
+    .content{
+      position: absolute;
+     top: 45%;
+     left: 4%;
+     
+    }
+    h1{
+        margin:15px 0px 15px ;
+        font-size: 25px;
+    }
+    h3{
+        margin-bottom: 45px ;
+        font-size: 15px;
+    }
+    .main{
+        flex-direction: column;
+    }
+   .about{
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .about img{
+        width: 330px;
+        margin-top: 80px;
+    }
+    .about-text h2{
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .about-text h5{
+        font-size: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .about-text p {
+        text-align: center;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    button{
+        text-align: center;
+        margin-left: 220px;
+        margin-right: 90px;
+        margin-bottom: 20px;
     }
     .service{
-        width: 1057px;
+        width: 100%;
+    }
+    .box{
+        flex-direction: column;
+    }
+    .title h2{
+        font-size: 38px;
+        text-align: center;
+        padding-right: 670px;
     }
     .card{
-        width: 1057px;
+        width: 80%;
     }
     .cantact-me{
-        width: 1057px;
+        width: 100%;
+        text-align: center;
     }
     footer{
-        width: 1057px;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
     }
+    
 }
