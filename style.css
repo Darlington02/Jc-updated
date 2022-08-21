@@ -4,6 +4,12 @@
     font-family: 'Josephin Sans', sans-serif;
     box-sizing: border-box;
 }
+
+/* extra protection to ensure there is no overflow */
+main{
+    overflow-x: hidden !important;
+}
+
 .hero{
     height: 100vh;
     width: 100%;
@@ -63,9 +69,8 @@ nav ul li a:hover{
 .content{
     position: absolute;
     top: 50%;
-    left: 8%;
     transform: translateY(-50%);
-
+    margin-left: 100px;
 }
 h1{
     color: white;
@@ -105,9 +110,9 @@ h4{
     border-radius: 30px;
     background-color: #f9004d;
     color: white;
-    box-shadow: 0px 0px 5px 000#, 0px 0px 15px #858585;
-    top:6px;
-    right:6px;
+    box-shadow: 0px 0px 5px 000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
 }
 .about{
     width: 100%;
@@ -163,7 +168,7 @@ button{
 }
 button:hover{
     background-color: transparent;
-    border: 2px solid: #f9004d;
+    border: 2px solid #f9004d;
     cursor: pointer;
 }
 
@@ -311,7 +316,8 @@ footer p:nth-child(2){
     bottom: 35px;
     font-size: 14px;
 }  
-@media screen and (max-width:430px){
+
+@media screen and (max-width:760px){
     .hero{
         width: 100%;
         height: 80vh;
@@ -322,6 +328,11 @@ footer p:nth-child(2){
     nav ul li{
         display: none;
         padding: 10px 25px;
+    }
+    /* to push the subscribe btn to the right edge */
+    nav #subscribe {
+        display: block;
+        margin-left: auto;
     }
     .logo{
         font-size: 15px;
@@ -334,12 +345,34 @@ footer p:nth-child(2){
         color: white;
         font-size: 30px;
     }
+
+    /* edited content to fit into mobile screen */
     .content{
-      position: absolute;
+     width: 90% !important;
+     position: absolute;
      top: 45%;
-     left: 4%;
-     
+     margin-left: 20px;
     }
+
+    /* edited the newsletter form and button to fit into mobile screen */
+    .newsletter #mail {
+        width: 90% !important;
+    }
+
+    .newsletter form input:last-child{
+        position: absolute;
+        display: inline-block;
+        outline: none;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 30px;
+        background-color: #f9004d;
+        color: white;
+        box-shadow: 0px 0px 5px 000, 0px 0px 15px #858585;
+        top: 6px;
+        right: 40px;
+    }
+
     h1{
         margin:15px 0px 15px ;
         font-size: 25px;
@@ -370,10 +403,14 @@ footer p:nth-child(2){
         margin-bottom: 25px;
         text-align: center;
     }
+
+    /* edited paragraph to not overflow on mobile */
     .about-text p {
+        display: block;
+        width: 60% !important;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
-        padding-left: 80px;
-        padding-right: 80px;
     }
     button{
         text-align: center;
@@ -387,10 +424,14 @@ footer p:nth-child(2){
     .box{
         flex-direction: column;
     }
+
+    /* edited the title h2 to properly center on mobile screen */
     .title h2{
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 38px;
-        text-align: center;
-        padding-right: 670px;
     }
     .card{
         width: 80%;
